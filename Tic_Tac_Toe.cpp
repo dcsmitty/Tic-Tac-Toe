@@ -3,13 +3,29 @@ using namespace std;
 
 char board[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
-int checkWin();
+bool checkWin();
 void printBoard();
 
 int main()
 {
+	bool winner = false;
+	int difficulty = 0;
 	
-	printBoard();
+	do{
+		cout << "Choose the difficulty of computer!(1 = Easy, 2 = Medium, 3 = Hard)" << endl;
+		cin >> difficulty;
+		if(difficulty == 1 || difficulty == 2 || difficulty == 3)
+		{
+			break;
+		}
+		
+	}while(true);
+	
+	do{
+	
+		printBoard();
+		break;
+	}while(!winner);
 	
 	return 0;
 }
